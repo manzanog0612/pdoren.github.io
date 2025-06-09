@@ -11,6 +11,26 @@ body {
         "wdth" 100;
 }
 
+.nav-link-anim {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link-anim::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(0, 86, 184);
+  transition: width 0.3s;
+}
+
+.nav-link-anim:hover::after {
+  width: 100%;
+}
+
 header {
     font-weight: 500;
 }
